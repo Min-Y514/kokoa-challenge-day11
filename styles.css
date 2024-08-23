@@ -1,0 +1,276 @@
+/* DONT DELETE THIS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+/* WRITE YOUR CODE BELOW */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  --singer-font-color: #a4a4a4;
+  --light-gray: #acacac;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f3f3f4;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-screen {
+  background-color: white;
+  border-radius: 30px;
+  height: 750px;
+  width: 335px;
+  margin: 50px 80px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.screen-header__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 30px 0px 30px;
+  opacity: 0.9;
+}
+
+.singer-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.singer-screen__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.singer-image {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+}
+
+.singer-screen__info h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.singer-screen__info h5 {
+  font-weight: 700;
+  color: var(--light-gray);
+}
+
+.singer-screen__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shuffle,
+.like {
+  width: 120px;
+  height: 40px;
+  border: none;
+  margin: 0px 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  box-shadow: var(--shadow);
+}
+
+.shuffle {
+  color: white;
+  background-color: black;
+}
+
+.like {
+  color: #aba6ad;
+  background-color: white;
+}
+
+.like > i {
+  color: black;
+  margin-right: 5px;
+}
+
+.singer-screen__songs {
+  margin: 30px;
+  width: 100%;
+}
+
+.singer-screen__song {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+}
+
+.song-image {
+  width: 50px;
+  height: 50px;
+  background-color: antiquewhite;
+  border-radius: 25%;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.song-info > span:first-child {
+  color: var(--singer-font-color);
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.song-info > span:last-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.singer-screen__song i {
+  padding: 0px 5px;
+}
+
+.mini-player {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: black;
+  box-shadow: var(--shadow);
+  border-radius: 50px;
+}
+
+.mini-player .song-info {
+  width: 50%;
+}
+
+.mini-player .song-info > span:last-child {
+  color: white;
+}
+
+.mini-player__icons {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.mini-player__icons .fa-pause {
+  margin: 0px 30px;
+}
+
+.playing-song {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playing-song__image {
+  width: 230px;
+  height: 230px;
+  border-radius: 35px;
+  background-color: cornflowerblue;
+  box-shadow: 0px 10px 25px rgba(8, 60, 193, 0.5);
+  margin: 65px 0px;
+}
+
+.playing-song__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playing-song__info span {
+  margin: 10px 0px;
+}
+
+.playing-song__info span:first-child {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.playing-song__info span:last-child {
+  font-weight: bold;
+  color: var(--singer-font-color);
+}
+
+.playing-status {
+  margin: 10px 0px 50px 0px;
+}
+
+.playing-status__times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--light-gray);
+  width: 270px;
+}
+
+.playing-status__bar input {
+  width: 100%;
+  height: 3px;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black 50%,
+    #e9e9e9 50%,
+    #e9e9e9 100%
+  );
+  accent-color: black;
+  size: 5px;
+  outline: none;
+  border-radius: 10%;
+}
+
+.playing-icons {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  height: 75px;
+}
+
+.playing-icons i:nth-child(1),
+.playing-icons i:nth-child(5) {
+  color: var(--light-gray);
+}
+
+.playing-icons .fa-circle-play {
+  font-size: 60px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
